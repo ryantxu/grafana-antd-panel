@@ -1,0 +1,31 @@
+{
+  "type": "panel",
+  "name": "Antd Test",
+  "id": "ryantxu-antd-panel",
+
+  "info": {
+    "description": "Test Antd in Grafana",
+    "author": {
+      "name": "ryantxu"
+    },
+    "keywords": ["ajax", "panel"],
+    "logos": {
+      "small": "img/antd.svg",
+      "large": "img/antd.svg"
+    },
+    "links": [
+      {"name": "Project site", "url": "https://github.com/ryantxu/dynamic-height-panel"},
+      {
+        "name": "MIT License",
+        "url": "https://github.com/ryantxu/dynamic-height-panel/blob/master/LICENSE"
+      }
+    ],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+
+  "dependencies": {
+    "grafanaVersion": "6.3.x",
+    "plugins": []
+  }
+}
