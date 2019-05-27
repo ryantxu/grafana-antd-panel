@@ -3,14 +3,11 @@ import { PanelProps } from '@grafana/ui';
 
 import { Avatar, Badge } from 'antd';
 
-
 import { Options } from '../types';
 
 interface Props extends PanelProps<Options> {}
 
-interface State {
-
-}
+interface State {}
 
 export class AntdPanel extends PureComponent<Props, State> {
   constructor(props) {
@@ -20,23 +17,22 @@ export class AntdPanel extends PureComponent<Props, State> {
   }
 
   render() {
-
-    return <div>Antd!!!!...
-
-<div>
-    <span style={{ marginRight: 24 }}>
-      <Badge count={1}>
-        <Avatar shape="square" icon="user" />
-      </Badge>
-    </span>
-    <span>
-      <Badge dot>
-        <Avatar shape="square" icon="user" />
-      </Badge>
-    </span>
-  </div>
-
-
-    </div>;
+    return (
+      <div>
+        Antd!!!!...
+        <div>
+          <span style={{ marginRight: 24 }}>
+            <Badge count={1}>
+              <Avatar shape="square" icon="user" />
+            </Badge>
+          </span>
+          <span>
+            <Badge dot>
+              <Avatar shape="square" icon="user" />
+            </Badge>
+          </span>
+        </div>
+      </div>
+    );
   }
 }
