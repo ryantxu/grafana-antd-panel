@@ -24,11 +24,32 @@ module.exports = {
     libraryTarget: 'amd',
   },
   externals: [
+    'antd',
+    'cleanslate',
     'lodash',
     'moment',
     'react',
     'react-dom',
-    '@grafana/ui'
+    '@grafana/ui',
+
+    function(context, request, callback) {
+      if(request.indexOf('ReactPropTypesSecret') >= 0) {
+        return callback(); //
+      }
+
+      // The plotly.min.js
+      if (request.indexOf('./lib/') === 0) {
+        console.log( 'SKIP', request );
+        return callback(null, request);
+      }
+
+      // if( request.indexOf('@ant-design')>=0 ) {
+      //   console.log( 'SKIP', request );
+      //   return callback(null, request);
+      // }
+
+      callback();
+    },
   ],
   plugins: [
     new CleanWebpackPlugin(),
@@ -37,6 +58,8 @@ module.exports = {
       { from: 'plugin.json', to: '.' },
       { from: '../README.md', to: '.' },
       { from: 'img/*', to: '.' },
+      { from: '../node_modules/antd/dist/', to: 'lib' },
+      { from: '../node_modules/cleanslate/cleanslate.css', to: 'lib' },
     ]),
     new ReplaceInFileWebpackPlugin([
       {
@@ -66,6 +89,10 @@ module.exports = {
         use: {
           loader: "babel-loader"
         }
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /node_modules\/.*\.less$/,

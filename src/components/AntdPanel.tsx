@@ -18,7 +18,7 @@ export class AntdPanel extends PureComponent<Props, State> {
 
   render() {
     return (
-      <div>
+      <div className="cleanslate">
         Antd!!!!...
         <div>
           <span style={{ marginRight: 24 }}>

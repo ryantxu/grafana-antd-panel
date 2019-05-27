@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "antd": "^3.19.0",
+    "cleanslate": "^0.10.1",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "moment": "^2.24.0",
