@@ -10,8 +10,7 @@
 Antd has some great UI elements, would be nice to use them in grafana plugins, but still need to sort out style conflicts
 
 
-
-Maybe try:
+TODO, try:
 ```
 node_modules/less/bin/lessc --js public/sass/antd.less aaa.css
 node_modules/postcss-cli/bin/postcss aaa.css --use autoprefixer --use > xxx.css
