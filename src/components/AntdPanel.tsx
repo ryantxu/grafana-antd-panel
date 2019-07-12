@@ -10,7 +10,7 @@ interface Props extends PanelProps<Options> {}
 interface State {}
 
 export class AntdPanel extends PureComponent<Props, State> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
 
     this.state = {};
